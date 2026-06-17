@@ -23,6 +23,5 @@ public class LoginTest extends BaseTest {
         System.out.println(page.title());
         DashboardPage dashboardPage = new DashboardPage(page);
         Assert.assertTrue(dashboardPage.isDashboardDisplayed(), "Dashboard is not displayed");
-        Assert.assertTrue(false);
     }
 }
