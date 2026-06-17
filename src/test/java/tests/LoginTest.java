@@ -19,6 +19,12 @@ public class LoginTest extends BaseTest {
         page.navigate(ConfigReader.getProperty("url"));
         LoginPage loginPage = new LoginPage(page);
         loginPage.login("Admin", "admin123");
+
+        page.waitForTimeout(5000);
+
+        System.out.println("Current URL = " + page.url());
+        System.out.println("Page Title = " + page.title());
+
         System.out.println(page.url());
         System.out.println(page.title());
         DashboardPage dashboardPage = new DashboardPage(page);
