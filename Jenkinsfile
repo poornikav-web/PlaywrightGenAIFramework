@@ -1,5 +1,8 @@
 pipeline {
     agent any
+      tools {
+            maven 'AutomationMaven'
+        }
     stages {
         stage('Build and Test') {
             steps {
